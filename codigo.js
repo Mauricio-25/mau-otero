@@ -21,62 +21,7 @@ window.onload = function(){
 }
 
 // ! SCRIPT DE LA SECCION DIVISOR
-const carrusel__contenedor = document.querySelector(".carrusel__contenedor");
 
-let carrusel__card = [];
-carrusel__card = document.querySelectorAll(".carrusel__card");
-
-let espaciadoTexto = carrusel__contenedor.dataset.espaciadoCards;
-
-let cantidad = parseInt(carrusel__contenedor.dataset.cantidadPantalla); /**/
-let espaciado;
-let anchoCarrusel__card;
-let anchoCarrusel__contenedor;
-let residuo = carrusel__card.length % cantidad;
-
-carrusel__contenedor.style.gap = espaciadoTexto; // Le asignamos el valor del atributo al estilo css
-// * Vemos si es % o px */
-if (espaciadoTexto.includes("%")) {
-	let numero = espaciadoTexto.replace("%","/100");
-	espaciado = eval(numero) * 100;
-} else {
-	espaciado = parseFloat(espaciadoTexto);
-}
-
-
-// * Asignarle el ancho a los cards
-for(i=0; i<carrusel__card.length; i++) {
-	carrusel__card[i].style.width = `calc( (100% - ${espaciado * (cantidad - 1)}px) / ${cantidad})`;
-	//anchoCarrusel__card = carrusel__card[i].offsetWidth;
-	//anchoCarrusel__card = (carrusel__card[i].offsetWidth / carrusel__card[i].parentElement.offsetWidth) * 100;
-	anchoCarrusel__card = (carrusel__card[i].offsetWidth * 100) / window.innerWidth;
-}
-
-console.log(anchoCarrusel__card)
-let bloques = Math.trunc(carrusel__card.length/cantidad);
-
-// * Calcular el ancho del carrusel__contenedor
-if (residuo == 0) {
-	anchoCarrusel__contenedor = 100 * bloques;
-
-	// * Asignarle el ancho al contendor
-	carrusel__contenedor.style.width = `${anchoCarrusel__contenedor}%`;
-
-} else {
-	if (carrusel__card.length<cantidad) {
-		bloques=1;
-		residuo=0;
-	}
-	anchoCarrusel__contenedor = (100 * bloques) + (anchoCarrusel__card*residuo);
-
-	// * Asignarle el ancho al contendor
-	carrusel__contenedor.style.width = `calc(${anchoCarrusel__contenedor}% + ${(espaciado*(residuo))}px)`;
-}
-
-
-
-
-console.log(espaciado)
 
 
 
