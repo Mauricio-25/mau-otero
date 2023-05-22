@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <!-- * metas -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="X-UA-Compatible" content="IE=7">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/logo-icono.png" type="image/x-icon">
+    <title>Otero - Films</title>
+
+    <!-- * CSS -->
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/estilos.css">
+
+    <!-- * Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Yaldevi:wght@300;400;500;600;700&family=Yanone+Kaffeesatz:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- * Icons -->
+    <script src="https://kit.fontawesome.com/745852fa0a.js" crossorigin="anonymous"></script>
+
+    <!-- * Icono Navegador -->
+    <link rel="icon" href="" sizes="32x32" />
+    <link rel="icon" href="" sizes="192x192" />
+    <link rel="apple-touch-icon" href=""/>
+    
+    <!-- * JS -->
+    <script src="codigo.js" defer></script>
+</head>
+<body>
+
+    <!-- ! PANTALLA DE CARGA -->
+    <section class="carga">
+        <div class="logo">
+            <img class="logo__img" src="img/logo-carga.png" alt="Logo de Otero Films" title="Logo de Otero Films">
+            <div class="logo__linea"></div>
+        </div>
+    </section>
+
+    <!-- ! SECCION HEADER -->
+    <section class="header">
+        <nav class="header__nav">
+            <li class="header__li"><a href="#">Contactanos</a></li>
+            <li class="header__li"><a href="#">Nosotros</a></li>
+            <li class="header__li"><a href="#">Proyectos</a></li>
+            <li class="header__li"><a href="#">Nuestros Servicios</a></li>
+        </nav>
+    </section>
+
+    <!-- ! SECCION PORTADA -->
+    <section class="portada">
+        <img class="portada__img" src="img/logo.png" alt="Logo de Otero Films">
+    </section>
+
+    <!-- ! SECCION NOSOTROS -->
+    <section class="nosotros">
+        <h1 class="nosotros__titulo">SOMOS OTEROFILMS</h1>
+        <img class="nosotros__flecha" src="img/flecha.png" alt="flecha">
+        <p class="nosotros__descripcion">
+            Somos una empresa multimedia enfocada en el desarrollo de contenidos digitales y el posicionamiento de imagen, haciendo uso de 
+            estrategias creativas e innovadoras, que permiten satisfacer las necesidades de nuestros clientes.
+        </p>
+    </section>
+
+    <!-- ! SECCION DIVISOR 
+        <section class="carrusel">
+        <div class="carrusel__contenedor" data-cantidad-pantalla="3" data-espaciado-cards="0px">
+            <div class="carrusel__card">
+                <img class="imagen" src="img/logo.png" alt="">
+            </div>
+
+            <div class="carrusel__card">
+                <img class="imagen" src="img/logo.png" alt="">
+            </div>
+
+            <div class="carrusel__card">
+                <img class="imagen" src="img/logo.png" alt="">
+            </div>
+
+            <div class="carrusel__card">
+                <img class="imagen" src="img/logo.png" alt="">
+            </div>
+        </div>
+    </section>-->
+    
+
+    <!-- ! SECCION CONTACTANOS -->
+    <section class="contactanos">
+        <div class="contactanos__card">
+            <h2 class="contactanos__titulo">Contáctanos</h2>
+            <p class="contactanos__texto">Estás a un click de tener fotos y videos increíbles</p>
+            <div class="contactanos__contenedor">
+                <span class="contactanos__texto-pequeño"><i class="fa-regular fa-clock contactanos__icono"></i>Te tomará 45 segundos</span>
+                <button class="contactanos__boton"  onclick="abrir()">Contáctanos</button>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- ! SECCION FORMULARIO -->
+    <section class="formulario">
+
+        <div class="formulario__slider">
+            <div class="formulario__barra"></div>
+
+            <div class="formulario__contenedor"><i class="fa-solid fa-xmark formulario__equis" onclick="cerrar()"></i></div>
+
+            <picture class="picture">
+                <img class="picture__img" src="img/logo.png" alt="Logo de Otero Films">
+            </picture>
+
+            <div class="contenedor">
+                <!-- * Pregunta 1 -->
+                <div class="contenedor__card">
+                    <p class="contenedor__number">1</p>
+                    <div class="contenedor__flecha"><i class="fa-solid fa-arrow-right contenedor__flecha-icono"></i></div>
+                    <div class="contenedor__copy">
+                        <p class="contenedor__texto">Primero que todo, ¿Cuál es tu correo?</p>
+                        <input class="contenedor__input" id="correo" type="email">
+                    </div>
+                </div>
+
+                <!-- * Pregunta 2 -->
+                <div class="contenedor__card">
+                    <p class="contenedor__number">2</p>
+                    <div class="contenedor__flecha"><i class="fa-solid fa-arrow-right contenedor__flecha-icono"></i></div>
+                    <div class="contenedor__copy">
+                        <p class="contenedor__texto">Genial, ¿Cuál es tu nombre?</p>
+                        <input class="contenedor__input" id="nombre" type="text">
+                    </div>
+                </div>
+
+                <!-- * Pregunta 3 -->
+                <div class="contenedor__card">
+                    <p class="contenedor__number">3</p>
+                    <div class="contenedor__flecha"><i class="fa-solid fa-arrow-right contenedor__flecha-icono"></i></div>
+                    <div class="contenedor__copy">
+                        <p class="contenedor__texto">
+                            <b>Falta poco para trabajar juntos</b><br>
+                            ¿Coméntanos de la producción que está buscando? 
+                        </p>
+                        <input class="contenedor__input" type="text">
+                    </div>
+                </div>
+
+                <!-- * Pregunta 4 -->
+                <div class="contenedor__card">
+                    <p class="contenedor__number">4</p>
+                    <div class="contenedor__flecha"><i class="fa-solid fa-arrow-right contenedor__flecha-icono"></i></div>
+                    <div class="contenedor__copy">
+                        <p class="contenedor__texto">
+                            <b>Por último</b> ¿Cuál es tu número de teléfono?  
+                        </p>
+                        <input class="contenedor__input" type="text">
+                    </div>
+                </div>
+
+                <!-- * Mensaje de éxito -->
+                <div class="contenedor__card contenedor__exito">
+                    <p class="contenedor__exito-texto"></p>
+                    <span class="contenedor__exito-span">en menos de 24 recibirás un mensaje nuestro</span>
+                    <i class="fa-brands fa-instagram contenedor__exito-icono"></i>
+                </div>
+            </div>
+
+            <div class="formulario__controles">
+                <div class="formulario__controles-contenedorI"><i class="fa-solid fa-chevron-left formulario__controles-izquierda"></i></div>
+                <div class="formulario__controles-contenedorD"><i class="fa-solid fa-chevron-right formulario__controles-derecha"></i></div>
+                <button class="formulario__enviar">Enviar</button>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>
