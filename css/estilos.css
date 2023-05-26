@@ -158,7 +158,7 @@ ol, ul {
     transform: scale(1.2);
 }
 /* ?  ------------------------------------------------------- VERSION MOBILE ------------------------------------------------------------------ */
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 800px) {
     .header {
         display: none;
     }
@@ -173,6 +173,7 @@ ol, ul {
 /* ?  --------------------------------------------------------- VERSION PC -------------------------------------------------------------------- */
 /* * codigo */
 .headerRes {
+    display: none;
     width: 100%;
     position: fixed;
     top: 0;
@@ -186,7 +187,7 @@ ol, ul {
     font-size: 40px;
 }
 .headerRes__nav {
-    display: flex;
+    display: none;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
@@ -196,7 +197,7 @@ ol, ul {
     z-index: 9;
     width: 100%;
     height: 100vh;
-    background: var(--colorPrimario);
+    background: var(--negro);
     transform: translateY(-100%);
     transition: 1.5s;
 }
@@ -214,8 +215,11 @@ ol, ul {
     transform: scale(1.2);
 }
 /* ?  ------------------------------------------------------- VERSION MOBILE ------------------------------------------------------------------ */
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 800px) {
     .headerRes {
+        display: flex;
+    }
+    .headerRes__nav {
         display: flex;
     }
 }
@@ -254,7 +258,7 @@ ol, ul {
     .nosotros {
         grid-template-columns: 1fr;
         gap: 15px;
-        margin-top: 100px;
+        padding-top: 150px;
     }
     .nosotros__descripcion {
         grid-column: 1/2;
