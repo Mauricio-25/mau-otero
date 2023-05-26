@@ -21,7 +21,69 @@ window.onload = function(){
 }
 
 // ! SCRIPT DE LA SECCION DIVISOR
+carrusel__card = [];
+carrusel__card = document.querySelectorAll(".carrusel__card");
 
+carrusel__contenedor = document.querySelector(".carrusel__contenedor");
+
+let marginActual = 0;
+let marginActual2 = 0;
+
+// * Desptok
+function moverDerecha() {
+	marginActual -= 12.5;
+    carrusel__contenedor.style.marginLeft = `${marginActual}%`;
+
+    carrusel__contenedor.style.transition = "1s ease all";
+    
+    setTimeout(()=>{
+        let clon = carrusel__contenedor.children[0].cloneNode(true);
+        let aux;
+        for (i=carrusel__contenedor.children.length-1; i>=0; i--) {
+            aux = carrusel__contenedor.children[i].cloneNode(true);
+            carrusel__contenedor.replaceChild(clon,carrusel__contenedor.children[i]);
+            clon = aux.cloneNode(true);
+        }
+		marginActual += 12.5;
+        carrusel__contenedor.style.marginLeft = `${marginActual}%`;
+        carrusel__contenedor.style.transition = "none";
+        
+    }, 1000);
+
+    
+}
+
+// * Mobile
+function moverDerecha2() {
+	marginActual -= 25;
+    carrusel__contenedor.style.marginLeft = `${marginActual}%`;
+
+    carrusel__contenedor.style.transition = "1s ease all";
+    
+    setTimeout(()=>{
+        let clon = carrusel__contenedor.children[0].cloneNode(true);
+        let aux;
+        for (i=carrusel__contenedor.children.length-1; i>=0; i--) {
+            aux = carrusel__contenedor.children[i].cloneNode(true);
+            carrusel__contenedor.replaceChild(clon,carrusel__contenedor.children[i]);
+            clon = aux.cloneNode(true);
+        }
+		marginActual += 25;
+        carrusel__contenedor.style.marginLeft = `${marginActual}%`;
+        carrusel__contenedor.style.transition = "none";
+        
+    }, 1000);
+
+    
+}
+
+setInterval( ()=>{
+	if (document.body.clientWidth > 800 ) {
+    	moverDerecha();
+	} else {
+		moverDerecha2();
+	}
+}, 4000)
 
 
 
@@ -29,8 +91,6 @@ window.onload = function(){
 const contenedor = document.querySelector(".contenedor");
 let contenedor__card = [];
 contenedor__card = document.querySelectorAll(".contenedor__card");
-
-const exito = document.querySelector(".contenedor__exito");
 
 // * Hacer el ancho del contendor y de las card dinámicas
 let anchoContenedor = contenedor__card.length*100;
@@ -44,7 +104,6 @@ for (i=0; i<contenedor__card.length; i++) {
 // * Funcionalidad de los botones, derecha e izquierda y enviar
 const anterior = document.querySelector(".formulario__controles-contenedorI");
 const siguiente = document.querySelector(".formulario__controles-contenedorD");
-const btnEnviar = document.querySelector(".formulario__enviar");
 let left = 0;
 let slideActual = 1;
 
@@ -61,9 +120,13 @@ siguiente.addEventListener("click", ()=>{
 	}
 
 	// Aparecer el boton enviar
-	if (slideActual == contenedor__card.length-1) {
+	if (slideActual == contenedor__card.length) {
 		siguiente.style.display = "none";
-		btnEnviar.style.display = "block";
+
+		// Desaparecer lso botones 
+		siguiente.style.display = "none";
+		anterior.style.display = "none";
+		enviar();
 	}
 
 
@@ -82,7 +145,6 @@ anterior.addEventListener("click", ()=>{
 		siguiente.style.cursor = "pointer";
 
 		siguiente.style.display = "block";
-		btnEnviar.style.display = "none";
 	}
 
 	// Desaparecer el boton anterior
@@ -91,20 +153,6 @@ anterior.addEventListener("click", ()=>{
 	}
 })
 
-btnEnviar.addEventListener("click", ()=>{
-	// Movemos el slide
-	left-=anchoContenedor__card;
-	slideActual++;
-	contenedor.style.marginLeft = `${left}%`;
-	modificarBarra();
-	
-	// Desaparecer lso botones 
-	siguiente.style.display = "none";
-	anterior.style.display = "none";
-	btnEnviar.style.display = "none";
-	exito.style.gap = "clamp(12px, 1.25vw, 20px)";
-	enviar();
-})
 
 
 // * Funcionalidad de la barra de progreso
