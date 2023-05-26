@@ -20,6 +20,20 @@ window.onload = function(){
 	document.body.removeChild(carga);
 }
 
+
+// ! SCRIPT DE LA SECCION HEADER RESPONSIVE
+const headerRes__nav = document.querySelector(".headerRes__nav");
+function abrirMenu() {
+	headerRes__nav.style.transform = "translateY(0)";
+}
+function cerrarMenu() {
+	headerRes__nav.style.transform = "translateY(-100%)";
+}
+
+
+
+
+
 // ! SCRIPT DE LA SECCION DIVISOR
 carrusel__card = [];
 carrusel__card = document.querySelectorAll(".carrusel__card");
@@ -31,7 +45,7 @@ let marginActual2 = 0;
 
 // * Desptok
 function moverDerecha() {
-	marginActual -= 12.5;
+	marginActual -= 100/6;
     carrusel__contenedor.style.marginLeft = `${marginActual}%`;
 
     carrusel__contenedor.style.transition = "1s ease all";
@@ -44,7 +58,7 @@ function moverDerecha() {
             carrusel__contenedor.replaceChild(clon,carrusel__contenedor.children[i]);
             clon = aux.cloneNode(true);
         }
-		marginActual += 12.5;
+		marginActual += 100/6;
         carrusel__contenedor.style.marginLeft = `${marginActual}%`;
         carrusel__contenedor.style.transition = "none";
         

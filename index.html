@@ -43,15 +43,27 @@
     <!-- ! SECCION HEADER -->
     <section class="header">
         <nav class="header__nav">
-            <li class="header__li"><a href="#">BOOK NOW</a></li>
-            <li class="header__li"><a href="#">Nosotros</a></li>
-            <li class="header__li"><a href="#">Proyectos</a></li>
-            <li class="header__li"><a href="#">Nuestros Servicios</a></li>
+            <li class="header__li"><a href="#contactanos">BOOK NOW</a></li>
+            <li class="header__li"><a href="#nosotros">Nosotros</a></li>
+            <li class="header__li"><a href="#video">Proyectos</a></li>
+            <li class="header__li"><a href="#servicios">Nuestros Servicios</a></li>
         </nav>
     </section>
 
+    <!-- ! SECCION HEADER RESPONSIVE -->
+    <section class="headerRes">
+        <p><i class="fa-solid fa-bars headerRes__i" onclick="abrirMenu()"></i></p>
+    </section>
+    <nav class="headerRes__nav">
+        <li class="headerRes__li"><i class="fa-solid fa-xmark headerRes__i" onclick="cerrarMenu()"></i></li>
+        <li class="headerRes__li"><a href="#contactanos" onclick="cerrarMenu()">BOOK NOW</a></li>
+        <li class="headerRes__li"><a href="#nosotros" onclick="cerrarMenu()">Nosotros</a></li>
+        <li class="headerRes__li"><a href="#video" onclick="cerrarMenu()">Proyectos</a></li>
+        <li class="headerRes__li"><a href="#servicios" onclick="cerrarMenu()">Nuestros Servicios</a></li>
+    </nav>
+
     <!-- ! SECCION NOSOTROS -->
-    <section class="nosotros">
+    <section class="nosotros" id="nosotros">
         <h1 class="nosotros__titulo">SOMOS OTEROFILMS</h1>
         <img class="nosotros__flecha" src="img/flecha.png" alt="flecha">
         <p class="nosotros__descripcion">
@@ -61,7 +73,7 @@
     </section>
 
     <!-- ! SECCION VIDEO -->
-    <section class="video">
+    <section class="video" id="video">
         <p class="video__texto">SHOWREEL</p>
         <div class="video__play"><i class="fa-solid fa-play"></i></div>
         <div class="video__controles">
@@ -159,7 +171,7 @@
     </section>
 
     <!-- ! SECCION PROYECTOS -->
-    <section class="proyectos">
+    <section class="proyectos" id="servicios">
         <div class="proyectos__circulo">
             <h2 class="proyectos__circulo-h2">Nuestros Servicios</h2>
             <p class="proyectos__circulo-p">Foto y Video</p>
@@ -180,7 +192,7 @@
     
 
     <!-- ! SECCION CONTACTANOS -->
-    <section class="contactanos">
+    <section class="contactanos" id="contactanos">
         <div class="contactanos__card">
             <h2 class="contactanos__titulo">Contáctanos</h2>
             <p class="contactanos__texto">Envíanos tus datos para darle seguimiento</p>
@@ -272,10 +284,10 @@
     <!-- ! SECCION FOOTER -->
     <section class="header">
         <nav class="header__nav">
-            <li class="header__li"><a href="#">BOOK NOW</a></li>
-            <li class="header__li"><a href="#">Nosotros</a></li>
-            <li class="header__li"><a href="#">Proyectos</a></li>
-            <li class="header__li"><a href="#">Nuestros Servicios</a></li>
+            <li class="header__li"><a href="#contactanos">BOOK NOW</a></li>
+            <li class="header__li"><a href="#nosotros">Nosotros</a></li>
+            <li class="header__li"><a href="#video">Proyectos</a></li>
+            <li class="header__li"><a href="#servicios">Nuestros Servicios</a></li>
         </nav>
     </section>
 
