@@ -97,7 +97,7 @@ setInterval( ()=>{
 	} else {
 		moverDerecha2();
 	}
-}, 4000)
+}, 2000)
 
 
 
@@ -197,11 +197,15 @@ function enviar() {
 
 // * Abrir el formulario
 const formulario = document.querySelector(".formulario");
-function abrir() {
+function abrir(servicio) {
 	formulario.style.display = "flex";
 	setTimeout(()=>{
 		formulario__slider.style.transform = "translateY(0vh)";
 	}, 100);
+
+	// Llenar el campo con el servicio seleccionado
+	servicioElemento = document.getElementById("servicio");
+	servicioElemento.value = servicio;
 }
 
 function cerrar() {

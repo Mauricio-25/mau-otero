@@ -17,7 +17,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Yaldevi:wght@300;400;500;600;700&family=Yanone+Kaffeesatz:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;700&display=swap" rel="stylesheet">
 
     <!-- * Icons -->
     <script src="https://kit.fontawesome.com/745852fa0a.js" crossorigin="anonymous"></script>
@@ -67,8 +67,8 @@
         <h1 class="nosotros__titulo">SOMOS OTEROFILMS</h1>
         <img class="nosotros__flecha" src="img/flecha.png" alt="flecha">
         <p class="nosotros__descripcion">
-            Somos una empresa multimedia enfocada en el desarrollo de contenidos digitales y el posicionamiento de imagen, haciendo uso de 
-            estrategias creativas e innovadoras, que permiten satisfacer las necesidades de nuestros clientes.
+            Una casa productora y post productora mexicana enfocada en el desarrollo de contenidos digitales y el posicionamiento de imagen de 
+            manera creativa, autentica y chingona.
         </p>
     </section>
 
@@ -181,13 +181,48 @@
         <div class="proyectos__linea"></div>
 
         <div class="proyectos__contenido">
-            <div class="proyectos__contenido-hijo proyectos__contenido-1"><a href="#" class="proyectos__contenido-a"><span>Corporativo</span> <img src="img/logo-icono.png" alt="logo de dignita tech" class="proyectos__img"></a></div>
-            <div class="proyectos__contenido-hijo proyectos__contenido-2"><a href="#" class="proyectos__contenido-a"><img src="img/logo-icono.png" alt="logo de dignita tech" class="proyectos__img"><span>Spot Publicitario</span></a></div>
-            <div class="proyectos__contenido-hijo proyectos__contenido-3"><a href="#" class="proyectos__contenido-a"><img src="img/logo-icono.png" alt="logo de dignita tech" class="proyectos__img"><span>Bodas</span></a></div>
-            <div class="proyectos__contenido-hijo proyectos__contenido-4"><a href="#" class="proyectos__contenido-a"><img src="img/logo-icono.png" alt="logo de dignita tech" class="proyectos__img"><span>Eventos</span></a></div>
-            <div class="proyectos__contenido-hijo proyectos__contenido-5"><a href="#" class="proyectos__contenido-a"><img src="img/logo-icono.png" alt="logo de dignita tech" class="proyectos__img"><span>Videos<br> musicales</span></a></div>
-            <div class="proyectos__contenido-hijo proyectos__contenido-6"><a href="#" class="proyectos__contenido-a"><span>Redes sociales</span><img src="img/logo-icono.png" alt="logo de dignita tech" class="proyectos__img"></a></div>
-            <div class="proyectos__contenido-hijo proyectos__contenido-7"><a href="#" class="proyectos__contenido-a"><span>Otros</span><img src="img/logo-icono.png" alt="logo de dignita tech" class="proyectos__img"></a></div>
+            <div class="proyectos__contenido-hijo proyectos__contenido-1">
+                <a href="#contactanos" class="proyectos__contenido-a" onclick='abrir("Corporativo")'>
+                    <span>Corporativo</span>
+                    <img src="img/logo-icono.png" alt="logo de dignita tech" class="proyectos__img">
+                </a>
+            </div>
+            <div class="proyectos__contenido-hijo proyectos__contenido-2">
+                <a href="#contactanos" class="proyectos__contenido-a" onclick='abrir("Spot Publicitario")'>
+                    <img src="img/logo-icono.png" alt="logo de dignita tech" class="proyectos__img">
+                    <span>Spot Publicitario</span>
+                </a>
+            </div>
+            <div class="proyectos__contenido-hijo proyectos__contenido-3">
+                <a href="#contactanos" class="proyectos__contenido-a" onclick='abrir("Bodas")'>
+                    <img src="img/logo-icono.png" alt="logo de dignita tech" class="proyectos__img">
+                    <span>Bodas</span>
+                </a>
+            </div>
+            <div class="proyectos__contenido-hijo proyectos__contenido-4">
+                <a href="#contactanos" class="proyectos__contenido-a" onclick='abrir("Eventos")'>
+                    <img src="img/logo-icono.png" alt="logo de dignita tech" class="proyectos__img">
+                    <span>Eventos</span>
+                </a>
+            </div>
+            <div class="proyectos__contenido-hijo proyectos__contenido-5">
+                <a href="#contactanos" class="proyectos__contenido-a" onclick='abrir("Videos musicales")'>
+                    <img src="img/logo-icono.png" alt="logo de dignita tech" class="proyectos__img">
+                    <span>Videos<br> musicales</span>
+                </a>
+            </div>
+            <div class="proyectos__contenido-hijo proyectos__contenido-6">
+                <a href="#contactanos" class="proyectos__contenido-a" onclick='abrir("Redes sociales")'>
+                    <span>Redes sociales</span>
+                    <img src="img/logo-icono.png" alt="logo de dignita tech" class="proyectos__img">
+                </a>
+            </div>
+            <div class="proyectos__contenido-hijo proyectos__contenido-7">
+                <a href="#contactanos" class="proyectos__contenido-a" onclick='abrir("")'>
+                    <span>Otros</span>
+                    <img src="img/logo-icono.png" alt="logo de dignita tech" class="proyectos__img">
+                </a>
+            </div>
         </div>
     </section>
     
@@ -196,18 +231,18 @@
     <section class="contactanos" id="contactanos">
         <div class="contactanos__card">
             <h2 class="contactanos__titulo">Contáctanos</h2>
-            <p class="contactanos__texto">Envíanos tus datos para darle seguimiento</p>
+            <p class="contactanos__texto nunito">Envíanos tus datos para darle seguimiento</p>
             <div class="contactanos__contenedor">
-                <span class="contactanos__texto-pequeño"><i class="fa-regular fa-clock contactanos__icono"></i>Te tomará 45 segundos</span>
-                <button class="contactanos__boton"  onclick="abrir()">Cotiza aquí</button>
+                <span class="contactanos__texto-pequeño nunito"><i class="fa-regular fa-clock contactanos__icono"></i>Te tomará 45 segundos</span>
+                <button class="contactanos__boton nunito"  onclick='abrir("")'>Cotiza aquí</button>
             </div>
         </div>
 
         <!-- * Información personal-->
         <div class="infoPersonal">
-            <h3 class="infoPersonal__h3">Head Director</h3>
-            <p>Mau Otero</p>
-            <p>info@oterofilms.com.mx</p>
+            <h3 class="infoPersonal__h3 nunito">Head Director</h3>
+            <p class="nunito">Mau Otero</p>
+            <p class="nunito">info@oterofilms.com.mx</p>
             <div class="redes-sociales">
                 <a href="https://www.instagram.com/mauu.otero/"><i class="fa-brands fa-instagram instagram"></i></a>
                 <a href="https://www.tiktok.com/@mauoteroo"><i class="fa-brands fa-tiktok tiktok"></i></a>
@@ -231,53 +266,53 @@
             <div class="contenedor">
                 <!-- * Pregunta 1 -->
                 <div class="contenedor__card">
-                    <p class="contenedor__number">1</p>
+                    <p class="contenedor__number nunito">1</p>
                     <div class="contenedor__flecha"><i class="fa-solid fa-arrow-right contenedor__flecha-icono"></i></div>
                     <div class="contenedor__copy">
-                        <p class="contenedor__texto">Nombre</p>
-                        <input class="contenedor__input" id="nombre" type="text">
+                        <p class="contenedor__texto nunito">Nombre</p>
+                        <input class="contenedor__input nunito" id="nombre" type="text">
                     </div>
                 </div>
 
                 <!-- * Pregunta 2 -->
                 <div class="contenedor__card">
-                    <p class="contenedor__number">2</p>
+                    <p class="contenedor__number nunito">2</p>
                     <div class="contenedor__flecha"><i class="fa-solid fa-arrow-right contenedor__flecha-icono"></i></div>
                     <div class="contenedor__copy">
-                        <p class="contenedor__texto">Correo</p>
-                        <input class="contenedor__input" id="correo" type="email">
+                        <p class="contenedor__texto nunito">Correo</p>
+                        <input class="contenedor__input nunito" id="correo" type="email">
                     </div>
                 </div>
 
                 <!-- * Pregunta 3 -->
                 <div class="contenedor__card">
-                    <p class="contenedor__number">3</p>
+                    <p class="contenedor__number nunito">3</p>
                     <div class="contenedor__flecha"><i class="fa-solid fa-arrow-right contenedor__flecha-icono"></i></div>
                     <div class="contenedor__copy">
-                        <p class="contenedor__texto">Teléfono</p>
-                        <input class="contenedor__input" type="text">
+                        <p class="contenedor__texto nunito">Teléfono</p>
+                        <input class="contenedor__input nunito" id="telefono" type="text">
                     </div>
                 </div>
 
                 <!-- * Pregunta 4 -->
                 <div class="contenedor__card">
-                    <p class="contenedor__number">4</p>
+                    <p class="contenedor__number nunito">4</p>
                     <div class="contenedor__flecha"><i class="fa-solid fa-arrow-right contenedor__flecha-icono"></i></div>
                     <div class="contenedor__copy">
-                        <p class="contenedor__texto">Describe el tipo de producción que buscas</p>
-                        <input class="contenedor__input" type="text">
+                        <p class="contenedor__texto nunito">Describe el tipo de producción que buscas</p>
+                        <input class="contenedor__input nunito" id="servicio" type="text">
                     </div>
                 </div>
 
                 <!-- * Mensaje de éxito -->
                 <div class="contenedor__card contenedor__exito">
-                    <p class="contenedor__exito-texto"></p>
+                    <p class="contenedor__exito-texto nunito nunitoBold"></p>
                 </div>
             </div>
 
             <div class="formulario__controles">
-                <div class="formulario__controles-contenedorD">NEXT</div>
-                <div class="formulario__controles-contenedorI">AFTER</div>
+                <div class="formulario__controles-contenedorI nunito nunitoBold">BACK</div>
+                <div class="formulario__controles-contenedorD nunito nunitoBold">NEXT</div>
             </div>
         </div>
     </section>
