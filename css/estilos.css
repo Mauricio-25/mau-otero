@@ -12,6 +12,9 @@
     --h3-2: clamp(23px, calc(35vw/18), 28px);
     --p-2: clamp(16px, calc(25vw/18), 20px);
 
+    --mediano: clamp(18px, 2.5vw, 36px);;
+    --pequeno: clamp(10px, 1.389vw, 20px);
+
     --tipografia2: 'Yaldevi', sans-serif;
     --tipografia1: 'Yanone Kaffeesatz', sans-serif;
 
@@ -82,15 +85,10 @@ ol, ul {
 .nunito {
     font-family: 'Nunito', sans-serif;
     font-weight: 300;
-    font-size: var(--h2-2);
+    font-size: var(--mediano);
 }
 .nunitoBold {
     font-weight: 500;
-}
-@media screen and (max-width: 800px) {
-    .nunito {
-        font-size: var(--p-2);
-    }
 }
 
 
@@ -258,6 +256,9 @@ ol, ul {
     font-size: var(--h1);
 }
 .nosotros__descripcion {
+    font-family: var(--tipografia2);
+    font-weight: 300;
+    font-size: clamp(20px, 2.431vw, 35px);
     grid-row: 2/3;
     grid-column: 2/3;
 }
@@ -303,7 +304,7 @@ ol, ul {
     align-items: center;
     gap: clamp(20px, 3.125vw, 45px);
     margin-bottom: clamp(50px, 11.11vw, 160px);
-    height: clamp(230px, 45.139vw, 650px);
+    height: clamp(230px, 52.083vw, 750px);
 }
 .video__play {
     width: clamp(40px, 4.86vw, 70px);
@@ -453,7 +454,6 @@ ol, ul {
     justify-content: center;
 }
 .proyectos__contenido-a {
-    display: block;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -523,6 +523,7 @@ ol, ul {
 
 .proyectos__contenido-hijo span {
     animation: girarG 35s infinite linear;
+    font-weight: 700;
 }
 .proyectos__contenido-1 span {
     animation: girar1 35s infinite linear;
@@ -725,14 +726,13 @@ ol, ul {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    gap: clamp(50px, 8.33vw, 120px);
+    gap: clamp(35px, 7.292vw, 105px);
     padding-top: clamp(50px, 12.5vw, 180px);
 }
 .contactanos__card {
     display: flex;
     align-items: center;
     flex-direction: column;
-    gap: clamp(20px, 2.78vw, 40px);
     border-radius: 20px;
     width: 70%;
     padding: clamp(25px, 3.47vw, 50px);
@@ -741,7 +741,7 @@ ol, ul {
     display: flex;
     align-items: center;
     flex-direction: column;
-    gap: clamp(20px, 1.74vw, 25px);
+    gap: clamp(12px, 1.389vw, 20px);
     width: 100%;
 }
 .contactanos__titulo {
@@ -749,12 +749,30 @@ ol, ul {
 }
 .contactanos__texto {
     width: 80%;
-    font-size: var(--h1-2);
+    font-size: var(--mediano);
     text-align: center;
-    margin-bottom: clamp(10px, 5.56vw, 80px);
+    margin-bottom: clamp(40px, 5.56vw, 80px);
 }
+.contactanos__botonTexto {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+/** ENTER */
+.contactanos__enter {
+    position: absolute;
+    right: 0;
+    font-size: var(--pequeno);
+    transform: translateX(calc(100% + 15px));
+}
+.contactanos__enter-i {
+    font-size: var(--pequeno);
+}
+
+
+
 .contactanos__boton {
-    width: 30%;
+    min-width: clamp(170px, 19.444vw, 280px);
     display: inline-block;
     background: transparent;
     padding: 15px 0;
@@ -764,19 +782,21 @@ ol, ul {
 }
 .contactanos__texto-pequeño {
     display: inline-block;
-    font-size: clamp(14px, calc(25vw/9), 25px);
+    font-size: var(--pequeno);
     text-align: center;
 }
 .contactanos__icono {
-    font-size: clamp(17px, calc(25vw/9), 25px);
+    font-size: var(--pequeno);
     margin-right: 8px;
 }
 
 /* * Animaciones */
 .contactanos__boton:hover {
-    background: var(--celeste);
     transform: scale(1.1);
     font-weight: 600;
+}
+.contactanos__boton:hover ~ .contactanos__enter {
+    transform: translateX(calc(100% + 25px));
 }
 
 
@@ -800,17 +820,16 @@ ol, ul {
 }
 
 /* ?  ------------------------------------------------------- VERSION MOBILE ------------------------------------------------------------------ */
-@media screen and (max-width: 450px) {
-    .contactanos__boton {
-        width: 100%;
-    }
-}
 @media screen and (max-width: 800px) {
+    .contactanos__texto {
+        font-size: var(--h3-2);
+        margin-top: -5px;
+    }
     .contactanos__card {
         width: 100%;
     }
     .contactanos__texto {
-        font-size: var(--h3-2);
+        width: 100%;
     }
 }
 
@@ -863,11 +882,8 @@ ol, ul {
 }
 .formulario__equis {
     font-size: var(--h2);
+    cursor: pointer;
 }
-    /* * Animacion */
-    .formulario__contenedor:hover {
-        background: var(--celeste);
-    }
 
 /* * Slide */
 .contenedor {
@@ -876,7 +892,7 @@ ol, ul {
 }
 .contenedor__card {
     display: grid;
-    grid-template-columns: auto auto 1fr;
+    grid-template-columns: auto 1fr;
     gap: 15px;
     padding: clamp(10px, 1.74vw, 25px) clamp(20px, 2.08vw, 30px);
 }
@@ -888,8 +904,11 @@ ol, ul {
 .contenedor__input {
     background-color: transparent;
     border: transparent;
-    width: 80%;
+    width: 99%;
     border-bottom: 2px solid var(--blanco);
+}
+.contenedor__input-corto {
+    width: 90%;
 }
 .contenedor__input:focus {
     outline: none;
@@ -911,15 +930,15 @@ ol, ul {
         padding: 0;
     }
     .contenedor__exito-texto {
-        font-size: var(--h2-2);
+        font-size: var(--mediano);
         font-weight: 700;
     }
 
 /* * Barra */
 .formulario__barra {
     width: 0%;
-    height: 8px;
-    background: var(--colorSecundario);
+    height: 4px;
+    background: var(--blanco);
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
     transition: 1.5s;
@@ -927,18 +946,20 @@ ol, ul {
 
 /* * Controles */
 .formulario__controles {
+    margin-left: calc(clamp(15.3px, 2.153vw, 31px) + 15px);
     padding: 0 clamp(20px, 2.08vw, 30px);
     padding-bottom: clamp(20px, 2.08vw, 30px);
     display: flex;
     justify-content: space-between;
 }
-.formulario__controles-contenedorI, .formulario__controles-contenedorD {
+.formulario__controles-contenedorI, .formulario__controles-contenedorD, .formulario__enviar {
     padding: 8px clamp(15px, 1.74vw,25px);
-    padding-top: 10.5px;
+    display: flex;
+    align-items: center;
     background: transparent;
     border-radius: 5px;
     border: 2px solid var(--blanco);
-    font-size: clamp(16px, calc(25vw/9), 28px);
+    font-size: var(--pequeno);
     cursor: pointer;
 }
 .formulario__controles-contenedorI:hover, .formulario__controles-contenedorD:hover {
@@ -947,7 +968,9 @@ ol, ul {
 .formulario__controles-contenedorI {
     opacity: 0;
 }
-
+.formulario__enviar {
+    display: none;
+}
 
 
 
@@ -978,10 +1001,6 @@ ol, ul {
     .contenedor__input {
         width: 100%;
     }
-    .contenedor__input:focus {
-        outline: none;
-        border-bottom: 3.8px solid var(--celeste);
-    }
     .contenedor__exito {
         padding: clamp(10px, 1.74vw, 25px) clamp(20px, 2.08vw, 30px);
     }
@@ -993,5 +1012,8 @@ ol, ul {
     }
     .formulario__contenedor {
         padding: 3px 6px;
+    }
+    .formulario__controles {
+        margin-left: 0px;
     }
 }

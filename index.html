@@ -234,7 +234,10 @@
             <p class="contactanos__texto nunito">Envíanos tus datos para darle seguimiento</p>
             <div class="contactanos__contenedor">
                 <span class="contactanos__texto-pequeño nunito"><i class="fa-regular fa-clock contactanos__icono"></i>Te tomará 45 segundos</span>
-                <button class="contactanos__boton nunito"  onclick='abrir("")'>Cotiza aquí</button>
+                <div class="contactanos__botonTexto">
+                    <button class="contactanos__boton nunito"  onclick='abrir("")'>Cotiza aquí</button>
+                    <span class="contactanos__enter">press Enter <i class="fa-solid fa-arrow-rotate-right contactanos__enter-i"></i></span>
+                </div>
             </div>
         </div>
 
@@ -254,7 +257,7 @@
     <!-- ! SECCION FORMULARIO -->
     <section class="formulario">
 
-        <div class="formulario__slider">
+        <form action="mailto:prueba@mauotero.mx" method="post" enctype="text/plain" class="formulario__slider">
             <div class="formulario__barra"></div>
 
             <div class="formulario__contenedor"><i class="fa-solid fa-xmark formulario__equis" onclick="cerrar()"></i></div>
@@ -266,56 +269,55 @@
             <div class="contenedor">
                 <!-- * Pregunta 1 -->
                 <div class="contenedor__card">
-                    <p class="contenedor__number nunito">1</p>
-                    <div class="contenedor__flecha"><i class="fa-solid fa-arrow-right contenedor__flecha-icono"></i></div>
+                    <p class="contenedor__number nunito">1.</p>
                     <div class="contenedor__copy">
                         <p class="contenedor__texto nunito">Nombre</p>
-                        <input class="contenedor__input nunito" id="nombre" type="text">
+                        <input class="contenedor__input nunito" type="text" id="nombre" name="nombre" required>
                     </div>
                 </div>
 
                 <!-- * Pregunta 2 -->
                 <div class="contenedor__card">
-                    <p class="contenedor__number nunito">2</p>
-                    <div class="contenedor__flecha"><i class="fa-solid fa-arrow-right contenedor__flecha-icono"></i></div>
+                    <p class="contenedor__number nunito">2.</p>
                     <div class="contenedor__copy">
                         <p class="contenedor__texto nunito">Correo</p>
-                        <input class="contenedor__input nunito" id="correo" type="email">
+                        <input class="contenedor__input nunito" type="email" id="correo" name="correo" required>
                     </div>
                 </div>
 
                 <!-- * Pregunta 3 -->
                 <div class="contenedor__card">
-                    <p class="contenedor__number nunito">3</p>
-                    <div class="contenedor__flecha"><i class="fa-solid fa-arrow-right contenedor__flecha-icono"></i></div>
+                    <p class="contenedor__number nunito">3.</p>
                     <div class="contenedor__copy">
                         <p class="contenedor__texto nunito">Teléfono</p>
-                        <input class="contenedor__input nunito" id="telefono" type="text">
+                        <input class="contenedor__input nunito" type="text" id="telefono" name="telefono" required>
                     </div>
                 </div>
 
                 <!-- * Pregunta 4 -->
                 <div class="contenedor__card">
-                    <p class="contenedor__number nunito">4</p>
-                    <div class="contenedor__flecha"><i class="fa-solid fa-arrow-right contenedor__flecha-icono"></i></div>
+                    <p class="contenedor__number nunito">4.</p>
                     <div class="contenedor__copy">
                         <p class="contenedor__texto nunito">Describe el tipo de producción que buscas</p>
-                        <input class="contenedor__input nunito" id="servicio" type="text">
+                        <input class="contenedor__input nunito contenedor__input-corto" type="text" id="tipo_produccion" name="tipo_produccion" required>
                     </div>
                 </div>
 
                 <!-- * Mensaje de éxito -->
                 <div class="contenedor__card contenedor__exito">
-                    <p class="contenedor__exito-texto nunito nunitoBold"></p>
+                    <p class="contenedor__exito-texto nunito"></p>
                 </div>
             </div>
 
             <div class="formulario__controles">
                 <div class="formulario__controles-contenedorI nunito nunitoBold">BACK</div>
                 <div class="formulario__controles-contenedorD nunito nunitoBold">NEXT</div>
+                
+                <input type="submit" value="Enviar" class="formulario__enviar nunito nunitoBold">
             </div>
-        </div>
+        </form>
     </section>
+    
 
     <!-- ! SECCION FOOTER -->
     <section class="header">

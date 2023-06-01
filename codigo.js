@@ -118,6 +118,7 @@ for (i=0; i<contenedor__card.length; i++) {
 // * Funcionalidad de los botones, derecha e izquierda y enviar
 const anterior = document.querySelector(".formulario__controles-contenedorI");
 const siguiente = document.querySelector(".formulario__controles-contenedorD");
+const btnEnviar = document.querySelector(".formulario__enviar");
 let left = 0;
 let slideActual = 1;
 
@@ -134,12 +135,11 @@ siguiente.addEventListener("click", ()=>{
 	}
 
 	// Aparecer el boton enviar
-	if (slideActual == contenedor__card.length) {
-		siguiente.style.display = "none";
+	if (slideActual == contenedor__card.length-1) {
+		btnEnviar.style.display = "flex";
 
 		// Desaparecer lso botones 
 		siguiente.style.display = "none";
-		anterior.style.display = "none";
 		enviar();
 	}
 
@@ -155,18 +155,36 @@ anterior.addEventListener("click", ()=>{
 		modificarBarra();
 
 		//Restablecer valores (hacer que aparezcan)
-		siguiente.style.opacity = "1";
-		siguiente.style.cursor = "pointer";
-
-		siguiente.style.display = "block";
+		siguiente.style.display = "flex";
+		btnEnviar.style.display = "none";
 	}
 
 	// Desaparecer el boton anterior
 	if (slideActual == 1) {
 		anterior.style.opacity = "0";
 	}
+
+	if (slideActual == 4) {
+		siguiente.style.display = "none";
+		btnEnviar.style.display = "flex";
+	}
 })
 
+btnEnviar.addEventListener("click", ()=>{
+	// Voltear a la derecha
+	if (slideActual+1 <= contenedor__card.length) { 
+		left-=anchoContenedor__card;
+		slideActual++;
+		contenedor.style.marginLeft = `${left}%`;
+		modificarBarra();
+
+		//Eliminar botones
+		siguiente.style.display = "none";
+		anterior.style.display = "none";
+		btnEnviar.style.display = "none";
+		enviar();
+	}
+})
 
 
 // * Funcionalidad de la barra de progreso
@@ -184,13 +202,21 @@ function modificarBarra() {
 // * Enviar el mensaje con su nombre
 const mensaje = document.querySelector(".contenedor__exito-texto");
 
-function enviar() {
+function enviar() { 
+	// Seleccionar los datos
 	let nombre = document.getElementById("nombre").value;
+	let correo = document.getElementById("correo").value;
+	let telefono = document.getElementById("telefono").value;
+	let tipo_produccion = document.getElementById("tipo_produccion").value;
 
-	if (nombre == "") {
-		nombre = "Usuario";
+	// Pantalla de exito
+	if (nombre == "" || correo == "" || telefono == "" || tipo_produccion == "" || !correo.includes("@")) {
+		mensaje.innerHTML = `Ocurrió un error, completa todos los campos para poder ayudarte`;
+		anterior.style.display = "flex";
+
+	} else {
+		mensaje.innerHTML = `Gracias, ${nombre}.<br>Nos contactaremos contigo pronto`;
 	}
-	mensaje.innerHTML = `Gracias, ${nombre}.<br>Nos contactaremos contigo pronto`;
 
 }
 
@@ -204,7 +230,7 @@ function abrir(servicio) {
 	}, 100);
 
 	// Llenar el campo con el servicio seleccionado
-	servicioElemento = document.getElementById("servicio");
+	servicioElemento = document.getElementById("tipo_produccion");
 	servicioElemento.value = servicio;
 }
 
