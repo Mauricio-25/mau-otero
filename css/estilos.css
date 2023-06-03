@@ -592,6 +592,72 @@ ol, ul {
     }
     
 }
+@media screen and (min-width: 805px) and (max-width: 995px) {
+    .proyectos__contenido-3 {
+        transform: translateX(-3px);
+    }
+    
+}
+@media screen and (min-width: 375px) and (max-width: 500px) {
+    .proyectos__contenido-3 {
+        transform: translateX(-4px);
+    }
+    .proyectos__contenido-7 {
+        transform: translateX(6px);
+    }
+    
+}
+@media screen and (min-width: 500px) and (max-width: 615px) {
+    .proyectos__contenido-3 {
+        transform: translateX(-2px);
+    }
+    .proyectos__contenido-6 {
+        transform: translateX(3px);
+    }
+    .proyectos__contenido-1 {
+        transform: translateY(-3px);
+    }
+    
+}
+@media screen and (min-width: 375px) and (max-width: 475px) {
+    .proyectos__contenido-1 {
+        transform: translateY(-10px);
+    }
+    
+}
+@media screen and (min-width: 340px) and (max-width: 374px) {
+    .proyectos__contenido-1 {
+        transform: translateY(-10px);
+    }
+    
+}
+@media screen and (min-width: 616px) and (max-width: 730px) {
+    .proyectos__contenido-1 {
+        transform: translateY(-3px);
+    }
+    
+}
+/**/
+@media screen and (min-width: 480px) and (max-width: 550px) {
+    .proyectos__contenido-6 {
+        transform: translateX(5px);
+    }
+    
+}
+/* */
+@media screen and (min-width: 1351px) and (max-width: 1530px) {
+    .proyectos__linea {
+        width: clamp(651px, 47.917vw, 720px);
+    }
+    
+}
+/**/
+@media screen and (min-width: 710px) and (max-width: 800px) {
+    .proyectos__linea {
+        width: clamp(342px, 50.063vw, 395px)
+    }
+    
+}
 
 
 
@@ -607,7 +673,6 @@ ol, ul {
     align-items: center;
     flex-direction: column;
     gap: clamp(35px, 7.292vw, 105px);
-    padding-top: clamp(50px, 12.5vw, 180px);
 }
 .contactanos__card {
     display: flex;
@@ -694,9 +759,6 @@ ol, ul {
     margin-top: 15px;
     display: flex;
     gap: 12px;
-}
-.instagram:hover, .tiktok:hover {
-    color: var(--celeste);
 }
 
 /* ?  ------------------------------------------------------- VERSION MOBILE ------------------------------------------------------------------ */
